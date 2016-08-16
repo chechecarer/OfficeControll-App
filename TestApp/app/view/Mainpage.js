@@ -14,10 +14,11 @@ Ext.define("TestApp.view.Mainpage", {
         	itemid:'power',
         	height:109,
         	width:93,
-        	ui:'action',
-        	//iconCls:'addicon',
+        	// ui:'action',
+            style: "background-image: url('./resources/images/homebackground.jpg'); background-size:100% 100%;color:white",
         	handler:this.showpwlist,
-        	scope:this
+        	scope:this,
+            flex: 1
         };
         var curtainBtn = {
         	xtype:'button',
@@ -25,10 +26,10 @@ Ext.define("TestApp.view.Mainpage", {
         	itemid:'curtain',
         	height:109,
         	width:93,
-        	//iconCls: 'add',
-        	ui:'action',
+            style: "background-image: url('./resources/images/homebackground.jpg'); background-size:100% 100%;color:white",
         	handler:this.showctlist,
-        	scope:this
+        	scope:this,
+            flex: 1
         };
         var lightBtn = {
         	xtype:'button',
@@ -37,37 +38,44 @@ Ext.define("TestApp.view.Mainpage", {
         	height:109,
         	width:93,
         	//iconCls: 'add',
-        	ui:'action',
+            style: "background-image: url('./resources/images/homebackground.jpg'); background-size:100% 100%;color:white",
+        	// ui:'action',
         	handler:this.showltlist,
-        	scope:this
+        	scope:this,
+            flex: 1
         };
         var myTopToolBar = {
         	xtype:'toolbar',
         	title:'首页',
-        	docked:'top'	
+        	docked:'top'
         };
         var myContainer = {
         	xtype:'container',
+            // cls: 'homepage',
         	flex : 1,
             layout: {
-                type : 'hbox',
-                align: 'middle'
+                type : 'vbox',
+                align: 'center'
             },
             items:[
             	{
-	            	xtype:'spacer'
+	            	xtype:'spacer',
+                    flex: 1
 	            },
 	            switchBtn,
 	            {
-	            	xtype:'spacer'
+	            	xtype:'spacer',
+                    flex: 1
 	            },
 	            curtainBtn,
 	            {
-	            	xtype:'spacer'
+	            	xtype:'spacer',
+                    flex: 1
 	            },
 	            lightBtn,
 	            {
-	            	xtype:'spacer'
+	            	xtype:'spacer',
+                    flex: 1
 	            }
             ]
         }
